@@ -5,9 +5,18 @@
   <meta charset="UTF-8">
   <title>File Converted</title>
   
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
   
-      <link rel="stylesheet" href="css/style.css">
 <style type="text/css" media="screen">
   
 
@@ -34,18 +43,19 @@ body{
 
 .blurred-box{
   position: relative;
-  width: 250px;
+  width: 500px;
   height: 350px;
   top: calc(50% - 175px);
-  left: calc(50% - 125px);
+  left: calc(50% - 250px);
   background: inherit;
   border-radius: 20px;
   overflow: hidden;
+
 }
 
 .blurred-box:after{
  content: '';
- width: 300px;
+ width: 500px;
  height: 300px;
  background: inherit; 
  position: absolute;
@@ -75,8 +85,10 @@ body{
 
 </style>
 </head>
-<body>
-<div class="blurred-box">
+<body >
+<div >
+
+<div class="blurred-box" >
   <div class="user-login-box">
     <?php 
 require_once("funs.php");
@@ -104,6 +116,8 @@ if(isset($vidType) && $_POST["submit"])
 	elseif($vidType == "avi")
 	{
 		$obj->convertAvi();
+		
+
 	}
 	elseif($vidType == "flv")
 	{
