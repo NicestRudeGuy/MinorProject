@@ -47,6 +47,8 @@ body{
   height: 350px;
   top: calc(50% - 175px);
   left: calc(50% - 250px);
+   right: : calc(50% - 15px);
+  bottom: calc(50% - 250px);
   background: inherit;
   border-radius: 20px;
   overflow: hidden;
@@ -95,41 +97,62 @@ require_once("funs.php");
 $obj = new convertVideo;
 
 $vidType = $_POST["type"];
-
-if (empty($_POST["type"])) {
-    echo 'Select a Container type first';
+if($vidType=="mp3"){
+	goto a;
 }
-if(isset($vidType) && $_POST["submit"])
-{
+else{
+$vidSize = $_POST["size"];
+}
+$qty="";
+
+if (empty($_POST["type"]) && empty($_POST["size"])){
+    echo 'Select a Container type and quality first';
+}
+if(isset($vidType) && isset($vidSize) &&  $_POST["submit"])
+{ 
+
+if($vidSize=="240")
+		$qty="352x240";
+	else if($vidSize=="360")
+		$qty="480x360";
+	else if($vidSize=="480")
+		$qty="858x480";
+	else if($qty=="540")
+		$qty="960x540";
+	else if($vidSize=="720")
+		$qty="1280x720";
+	else if($vidSize=="1080")
+		$qty="1920x1080";
+	
+
 	if($vidType == "mp4")
 	{
-		$obj->convertMp4();
+		$obj->advConvert("mp4",$qty);
 	}
 	elseif($vidType == "mpeg")
 	{
-		$obj->convertMpeg();
+		$obj->advConvert("mpeg",$qty);
 	}
 	elseif($vidType == "mkv")
 	{
-		$obj->convertMkv();
+		$obj->advConvert("mkv",$qty);
 	}
 	elseif($vidType == "avi")
 	{
-		$obj->convertAvi();
-		
-
+		$obj->advConvert("avi",$qty);
 	}
 	elseif($vidType == "flv")
 	{
-		$obj->convertFlv();
+		$obj->advConvert("flv",$qty);
 	}
 	elseif($vidType == "webm")
 	{
-		$obj->convertWebm();
+		$obj->advConvert("webm",$qty);
 	}
 	elseif($vidType == "mp3")
 	{
-		$obj->convertMp3();
+		a: 
+		$obj->convMp3();
 	}
 	else
 	{		

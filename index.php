@@ -29,7 +29,7 @@ border-radius: 16px;
 }
 
 body{
-	background: url("bg/f1.gif");
+	background: url("bg/z1.gif");
 }
 
 </style>
@@ -48,40 +48,48 @@ body{
 		<input class="bg-primary" data-toggle="tooltip" title="Upload" type="file" name="video" accept="video/*" required  style="border-radius: 5px;">
 	</div> 	
 		<div class="col-sm-4">
-		<H3>Select a container type</H3>
+		<H3>Select a container type and size</H3>
 	</div></div></div>
 	<div class="row">
 	<div class="col-sm-4">
+		240P	<input type="radio" name="size" value="240" >
 		MP4	<input type="radio" name="type" value="mp4" required>
 	</div>
 	<div class="col-sm-4">
+		360P	<input type="radio" name="size" value="360">
 		WEBM <input type="radio" name="type" value="webm" required>
 	</div>
 	<div class="col-sm-4">
+		480P	<input type="radio" name="size" value="480" >
 		FLV	<input type="radio" name="type" value="flv" required>
 	</div>
 	<div class="col-sm-4">
+		540P	<input type="radio" name="size" value="540">
 		MKV	<input type="radio" name="type" value="mkv" required>
 	</div>
 	<div class="col-sm-4">
+		720P	<input type="radio" name="size" value="720">
 		AVI	<input type="radio" name="type" value="avi" required>
 	</div>
 	<div class="col-sm-4">
+		1080P	<input type="radio" name="size" value="1080">
 		MPEG <input type="radio" name="type" value="mpeg" required>
 	</div>
 	<div class="col-sm-4">
 		MP3 <input type="radio" name="type" value="mp3" required>
+
 	</div>
 	<br>
 </div>
 	<div class="col-sm-4">
 		<input class="btn btn-primary" type="submit" name="submit">
-	</div>
+		<a class="btn btn-secondary" href="fil.php"><i class="fa fa-file-movie-o"></i>&nbsp;Filters</a>
+
 
 	<pre>	
 			*Still in Beta 
 	     video size limit is 1 gig 
-			v0.2
+			v0.3
 					</pre>
 </div>	</form>
 </body>
