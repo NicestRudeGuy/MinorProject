@@ -77,7 +77,7 @@ body{
 	</div>
 
 	<pre>	
-			*Still in Beta 
+			
 	     video size limit is 1 gig 
 			v0.3
 					</pre>

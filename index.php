@@ -52,31 +52,45 @@ body{
 	</div></div></div>
 	<div class="row">
 	<div class="col-sm-4">
-		240P	<input type="radio" name="size" value="240" >
+		240P	<input type="radio" id="fa"  name="size" value="240" >
 		MP4	<input type="radio" name="type" value="mp4" required>
 	</div>
 	<div class="col-sm-4">
-		360P	<input type="radio" name="size" value="360">
+		360P	<input type="radio" id="fb" name="size" value="360">
 		WEBM <input type="radio" name="type" value="webm" required>
 	</div>
 	<div class="col-sm-4">
-		480P	<input type="radio" name="size" value="480" >
+		480P	<input type="radio" id="fc" name="size" value="480" >
 		FLV	<input type="radio" name="type" value="flv" required>
 	</div>
 	<div class="col-sm-4">
-		540P	<input type="radio" name="size" value="540">
+		540P	<input type="radio" id="fd" name="size" value="540">
 		MKV	<input type="radio" name="type" value="mkv" required>
 	</div>
-	<div class="col-sm-4">
-		720P	<input type="radio" name="size" value="720">
+	<div class="col-sm-4" >
+		720P	<input class="hi" id="fe" type="radio" id="fs" name="size" value="720">
 		AVI	<input type="radio" name="type" value="avi" required>
 	</div>
-	<div class="col-sm-4">
-		1080P	<input type="radio" name="size" value="1080">
+	<div class="col-sm-4" >
+		1080P	<input class="hi" id="ff" type="radio" id="fb" name="size" value="1080">
 		MPEG <input type="radio" name="type" value="mpeg" required>
 	</div>
 	<div class="col-sm-4">
-		MP3 <input type="radio" name="type" value="mp3" required>
+		MP3 <input type="radio" id="mp3" name="type" value="mp3" onclick="dis()" required>
+		<script>
+			 function dis () {
+			 		
+			 		document.getElementById('fa').disabled=true;
+			 		document.getElementById('fb').disabled=true;
+			 		document.getElementById('fc').disabled=true;
+			 		document.getElementById('fd').disabled=true;
+			 		document.getElementById('fe').disabled=true;
+			 		document.getElementById('ff').disabled=true;
+			 	
+			 		//document.getElementsByClassName('hi').disabled=true;
+
+		}
+		</script>
 
 	</div>
 	<br>
@@ -87,7 +101,7 @@ body{
 
 
 	<pre>	
-			*Still in Beta 
+			 
 	     video size limit is 1 gig 
 			v0.3
 					</pre>
